@@ -1,12 +1,14 @@
-module.exports = [
-  {
-    settings: {
-      cors: {
-        enabled: true,
-        origin: ["https://backend-wpof.onrender.com/"], // Replace with your frontend app URL
-      },
+module.exports = ({ env }) =>[({
+  settings: {
+    cors: {
+      enabled: true,
+      origin: env('CORS_ORIGIN', 'https://backend-wpof.onrender.com/'),
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      headers: ['Content-Type', 'Authorization'],
     },
   },
+});
+
 
   "strapi::logger",
   "strapi::errors",
