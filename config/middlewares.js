@@ -2,7 +2,7 @@ module.exports = ({ env }) => [
   {
     name: "strapi::cors",
     config: {
-      origin: ["https://backend-wpof.onrender.com"],
+      origin: [env("CORS_ORIGIN", "https://pick-your-purr.onrender.com")],
     },
   },
   "strapi::logger",
