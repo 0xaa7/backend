@@ -3,7 +3,7 @@ module.exports = [
     settings: {
       cors: {
         enabled: true,
-        origin: ["https://your-frontend-app.com"], // Replace with your frontend app URL
+        origin: ["https://backend-wpof.onrender.com/"], // Replace with your frontend app URL
       },
     },
   },
